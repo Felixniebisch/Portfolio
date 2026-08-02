@@ -1,0 +1,124 @@
+/* Interactive Heame recreation — Heame case study */
+
+.heame-frame {
+  background: #eef5e5;
+  border-radius: var(--radius-lg);
+  padding: clamp(14px, 3vw, 32px);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.heame-app {
+  --hm-bg1: #e7fcab;
+  --hm-bg2: #cdffc9;
+  --hm-dark: #303e2f;
+  --hm-dark-alt: #3c4c3a;
+  --hm-muted: #c1dabe;
+  --hm-ring: #8fd16f;
+  --hm-yellow: #e8c468;
+  --hm-red: #d9634a;
+  --hm-green: #6fbe7a;
+  --hm-blue: #4e8fe0;
+  --hm-purple: #8b5fbf;
+  font-family: var(--sans);
+  background: linear-gradient(160deg, var(--hm-bg1), var(--hm-bg2) 85%);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(30,50,20,.16);
+  border: 1px solid rgba(255,255,255,.4);
+}
+
+.heame-app__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 18px 4px;
+}
+.heame-logo {
+  width: 34px; height: 34px; border-radius: 10px;
+  background: rgba(255,255,255,.55);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; border: none; font-size: 1rem;
+}
+.heame-menu { background: none; border: none; cursor: default; color: var(--hm-dark); opacity: .8; font-size: 1.1rem; letter-spacing: 2px; }
+
+.heame-view { display: none; padding: 6px 18px 20px; min-height: 480px; }
+.heame-view.is-active { display: block; }
+
+/* ---- ring ---- */
+.heame-ring-wrap { position: relative; width: 128px; height: 128px; margin: 10px auto 22px; }
+.heame-ring-wrap svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.heame-ring-wrap circle { fill: none; stroke-width: 11; }
+.heame-ring-wrap .track { stroke: var(--hm-dark); opacity: .18; }
+.heame-ring-wrap .fg { stroke: var(--hm-ring); stroke-linecap: round; transition: stroke-dashoffset 1s cubic-bezier(.2,.8,.2,1); }
+.heame-ring-label {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: var(--hm-dark); color: #fff; border-radius: 50%; width: 86px; height: 86px; margin: auto;
+  font-size: 1.7rem; font-weight: 800;
+}
+.heame-ring-label small { font-size: .6rem; font-weight: 700; opacity: .85; margin-top: -2px; }
+.heame-ring-wrap.is-sm { width: 96px; height: 96px; }
+.heame-ring-wrap.is-sm .heame-ring-label { width: 66px; height: 66px; font-size: 1.25rem; }
+
+/* ---- home grid ---- */
+.heame-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+.heame-tile {
+  background: var(--hm-muted); border: none; border-radius: 16px; padding: 14px;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 22px;
+  cursor: pointer; text-align: left; font-family: inherit;
+  transition: transform .2s ease, filter .2s ease;
+}
+.heame-tile:hover { filter: brightness(1.06); transform: translateY(-1px); }
+.heame-tile--wide { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: space-between; gap: 0; }
+.heame-tile .l { font-weight: 700; font-size: .82rem; color: var(--hm-dark); }
+.heame-tile .icon { font-size: 1.3rem; align-self: flex-end; }
+.heame-tile--wide .icon { align-self: center; }
+
+.heame-reports {
+  background: var(--hm-muted); border-radius: 16px; padding: 16px; margin-top: 4px;
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  font-weight: 700; font-size: .82rem; color: var(--hm-dark);
+}
+.heame-reports .badge { background: #fff; border-radius: 999px; padding: 5px 12px; font-size: .74rem; }
+
+/* ---- detail views ---- */
+.heame-view__head { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+.heame-view__head button { background: rgba(255,255,255,.5); border: none; width: 30px; height: 30px; border-radius: 9px; cursor: pointer; font-size: .9rem; }
+.heame-view__title { font-weight: 800; color: var(--hm-dark); font-size: 1rem; }
+.heame-context { font-size: .8rem; color: var(--hm-dark); opacity: .85; line-height: 1.5; margin: 10px 0 18px; }
+.heame-context strong { font-weight: 800; }
+
+.heame-stat-row { display: flex; justify-content: center; gap: 30px; margin-bottom: 10px; }
+.heame-stat-row .s { text-align: center; }
+.heame-stat-row .s b { display: block; font-size: 1.05rem; color: var(--hm-dark); }
+.heame-stat-row .s span { font-size: .68rem; color: var(--hm-dark); opacity: .7; }
+
+.heame-bars { display: flex; flex-direction: column; gap: 12px; margin: 14px 0 6px; }
+.heame-bar-row { display: grid; grid-template-columns: 90px 1fr 56px; align-items: center; gap: 10px; font-size: .78rem; color: var(--hm-dark); }
+.heame-bar-track { height: 7px; border-radius: 4px; background: rgba(48,62,47,.15); overflow: hidden; }
+.heame-bar-fill { height: 100%; border-radius: 4px; }
+
+.heame-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+.heame-card { background: var(--hm-dark); color: #fff; border-radius: 14px; padding: 12px 14px; }
+.heame-card .t { font-size: .74rem; font-weight: 700; margin-bottom: 2px; }
+.heame-card .sub { font-size: .62rem; opacity: .65; margin-bottom: 8px; }
+.heame-card .val { font-size: .72rem; font-weight: 700; text-align: right; margin-top: 4px; }
+.heame-card .goal { font-size: .62rem; opacity: .7; margin-top: 6px; }
+
+/* nutrition specific */
+.heame-glasses { display: flex; gap: 10px; background: rgba(255,255,255,.4); border-radius: 14px; padding: 14px; margin: 16px 0; justify-content: center; }
+.heame-glass { width: 30px; height: 34px; cursor: pointer; opacity: .5; transition: opacity .2s ease, transform .2s ease; }
+.heame-glass.is-filled { opacity: 1; }
+.heame-glass:active { transform: scale(.9); }
+.heame-meals { display: flex; justify-content: space-between; background: var(--hm-dark); border-radius: 14px; padding: 12px 14px; margin-bottom: 6px; }
+.heame-meals span { color: #fff; font-size: .76rem; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+.heame-meals span i { font-style: normal; opacity: .7; }
+
+/* ---- tab bar ---- */
+.heame-tabbar { display: flex; justify-content: space-around; padding: 12px 10px; background: rgba(255,255,255,.35); }
+.heame-tabbar button { background: none; border: none; font-size: 1.15rem; opacity: .55; cursor: pointer; padding: 6px; border-radius: 10px; transition: opacity .2s ease, background .2s ease; }
+.heame-tabbar button.is-active { opacity: 1; background: rgba(48,62,47,.12); }
+
+@media (max-width: 420px) {
+  .heame-frame { max-width: 92vw; }
+}

@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Splint / Inklusion Digital - Case Study - Felix Niebisch</title>
+<meta name="description" content="Ein in 8 Stunden designtes Förderplanungs-Dashboard: vier Metriken, eine Schülerin, ein Bildschirm. Mit interaktiver Live-Nachbildung.">
+<link rel="stylesheet" href="../css/style.css?v=2">
+<link rel="stylesheet" href="../assets/splint-demo.css?v=2">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav__inner">
+    <a href="../index.html" data-i18n="nav.home">Startseite</a>
+    <a href="../about.html" data-i18n="nav.about">Über mich</a>
+    <a href="../resume.html" data-i18n="nav.resume">Lebenslauf</a>
+    <div class="lang-toggle">
+      <button type="button" data-lang="de" class="is-active">DE</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<header class="cs-hero cs-hero--splint">
+  <div class="cs-hero__inner">
+    <span class="eyebrow" data-i18n="hero.eyebrow">Case Study · in 8 Stunden designt</span>
+    <h1 data-i18n="hero.h1">Splint - ein Dashboard für die Förderplanung</h1>
+    <p class="sub" data-i18n="hero.sub">Vier Metriken, eine Schülerin, ein Bildschirm - eine Live-Designübung für meine Bewerbung als Junior UX Designer bei Inklusion-Digital.</p>
+  </div>
+</header>
+
+<article class="prose" style="max-width:760px">
+  <a class="back-link" href="../index.html" data-reveal data-i18n="back">&larr; Zurück zur Übersicht</a>
+
+  <h2 data-reveal data-i18n="h.context">Kontext</h2>
+  <p data-reveal data-i18n="p.context">Mit dieser Case Study möchte ich dich durch einen Designprozess mitnehmen - von der ersten Idee bis zum High-Fidelity-Layout - alles innerhalb eines einzigen Arbeitstages, im Rahmen meiner Bewerbung bei Inklusion-Digital.</p>
+
+  <h2 data-reveal data-i18n="h.research">Recherche</h2>
+  <p data-reveal data-i18n="p.research">Zunächst habe ich mir einen Überblick über das bestehende System von Inklusion-Digital verschafft: öffentlich zugängliche Screens und verfügbare Informationen wanderten direkt in ein FigJam-Board, zusammen mit meinen ersten eigenen Gedanken.</p>
+  <blockquote data-reveal data-i18n="quote.research">Die zentrale Frage, die ein solches Interface beantworten muss: Welche Metriken führen zu einfacheren - und im besten Fall besseren - Entscheidungen in der Förderplanung? Wenn ein Dashboard eine Schülerin oder einen Schüler in den Mittelpunkt stellt, muss alles Gezeigte den Fortschritt auf einen Blick vermitteln.</blockquote>
+  <p data-reveal data-i18n="p.researchLead">Daraus wurde klar, was Splint eigentlich leisten sollte:</p>
+  <ul style="color:var(--ink-soft); font-size:1.1rem;" data-reveal data-i18n="list.goals">
+    <li>Lernpotenziale sichtbar machen</li>
+    <li>Individuelle Förderung vereinfachen</li>
+    <li>Den Einsatz digitaler Tools barrierefrei gestalten</li>
+  </ul>
+
+  <h2 data-reveal data-i18n="h.scope">Rahmen festlegen</h2>
+  <p data-reveal data-i18n="p.scope">An diesem Punkt habe ich entschieden, das Projekt in der individualisierten Übersicht eines einzelnen Schülerprofils zu verorten.</p>
+
+  <h2 data-reveal data-i18n="h.exists">Was bereits existiert</h2>
+  <p data-reveal data-i18n="p.exists">Die nächste Frage war, welche Informationen bereits vorhanden sind, auf denen sich aufbauen lässt: Beobachtungen, Fremdbeurteilungen, Anwesenheit, Kontaktdaten und der Förderplan mit seinen Zielen.</p>
+
+  <h2 data-reveal data-i18n="h.requirements">Nutzeranforderungen</h2>
+  <p data-reveal data-i18n="p.requirements">Die eigentliche Frage ist, welche Metriken den Förderprozess möglichst unverzerrt abbilden. In einem echten Prozess würde ich damit direkt zu Lehrkräften gehen und die Kernmetriken gemeinsam in Interviews erarbeiten - hier habe ich stattdessen eine Abkürzung genommen und mich mit Claude zusammengesetzt. Nach etwas Hin und Her bin ich bei vier gelandet:</p>
+  <ul style="color:var(--ink-soft); font-size:1.1rem;" data-reveal>
+    <li data-i18n="metric.1"><strong>Zielbearbeitungsquote</strong> - wie viele Förderziele aktiv bearbeitet werden</li>
+    <li data-i18n="metric.2"><strong>Zielerreichungsquote</strong> - wie viele Förderziele erreicht wurden</li>
+    <li data-i18n="metric.3"><strong>Teilnahmekonsistenz</strong> - wie regelmäßig teilgenommen wird</li>
+    <li data-i18n="metric.4"><strong>Beobachteter Fortschritt</strong> - Fortschritt aus den Beobachtungen der Lehrkräfte</li>
+  </ul>
+  <p data-reveal data-i18n="p.requirementsClose">Dahinter stand eine Leitfrage: Was brauchen Lehrkräfte, um den Förderprozess schnell zu verstehen - und anzupassen?</p>
+
+  <h2 data-reveal data-i18n="h.modelling">Modellierung</h2>
+  <p data-reveal data-i18n="p.modelling">Basierend auf den gesammelten Informationen und den Zielen, die ich für Splint gesetzt hatte, habe ich einen ersten Prototyp von Hand skizziert.</p>
+  <img data-reveal src="../assets/img/splint/sketch.png" alt="Hand-drawn wireframe sketch of the Splint dashboard, annotated with design notes" style="border-radius: var(--radius-md); max-width: 420px; margin: 8px auto 0; box-shadow: 0 20px 50px rgba(20,30,50,.12);">
+
+  <h2 data-reveal data-i18n="h.designSystem">Designsystem</h2>
+  <p data-reveal data-i18n="p.designSystem">Darauf aufbauend habe ich ein Designsystem entwickelt, das Klarheit, Konsistenz und Nutzbarkeit in den Vordergrund stellt.</p>
+
+  <div class="ds-grid" data-reveal>
+    <div class="ds-card">
+      <h4 data-i18n="h4.colorSystem">Farbsystem</h4>
+      <div class="ds-swatches">
+        <div class="ds-swatch" style="background:#163659; color:#fff;" data-i18n="swatch.headerText">Header &amp; Text</div>
+        <div class="ds-swatch" style="background:#d5e0ea;">Widgets</div>
+        <div class="ds-swatch" style="background:#f7f7f7; border:1px solid var(--line);" data-i18n="swatch.background">Hintergrund</div>
+        <div class="ds-swatch" style="background:#4a9d73; color:#fff;" data-i18n="swatch.accent">Akzent</div>
+        <div class="ds-swatch" style="background:#f6b24e;" data-i18n="swatch.accent">Akzent</div>
+      </div>
+    </div>
+    <div class="ds-card">
+      <h4 data-i18n="h4.typography">Typografie - Roboto</h4>
+      <div class="ds-type"><span style="font-weight:800; font-size:1.6rem;">Extrabold 78pt</span><span data-i18n="type.headlines">Große Überschriften</span></div>
+      <div class="ds-type"><span style="font-weight:700; font-size:1.3rem;">Black 42pt</span><span data-i18n="type.headings">Überschriften</span></div>
+      <div class="ds-type"><span style="font-weight:400; font-size:1.1rem;">Regular 42pt</span><span data-i18n="type.body">Fließtext</span></div>
+      <div class="ds-type"><span style="font-weight:300; font-size:1rem;">Light 35pt</span><span data-i18n="type.annotations">Anmerkungen</span></div>
+    </div>
+  </div>
+</article>
+
+<section class="block" style="padding-top:20px;">
+  <div class="container section-head" data-reveal>
+    <span class="eyebrow" style="justify-content:center" data-i18n="demo.eyebrow">Live-Nachbildung, kein Screenshot</span>
+    <h2 data-i18n="demo.heading">Das finale Interface</h2>
+    <p style="max-width:56ch; margin:14px auto 0; color:var(--ink-soft);" data-i18n="demo.sub">Dies ist ein funktionierender Nachbau von Splints Dashboard. Wechsle zwischen Kompetenzen oder trage eine neue Beobachtung ein, so wie es eine Lehrkraft tun würde.</p>
+  </div>
+
+  <div class="splint-frame" data-reveal>
+    <div class="splint" id="splint-demo">
+      <div class="splint__topbar">
+        <span class="splint__logo"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#163659" stroke-width="2"/><path d="M12 2a10 10 0 0 1 0 20z" fill="#f6b24e"/></svg> Splint</span>
+      </div>
+      <div class="splint__layout">
+        <aside class="splint__sidebar">
+          <button class="s-nav-item is-active" type="button"><span>&larr;</span>Zurück</button>
+          <button class="s-nav-item" type="button"><span>&#8962;</span>Aufgaben</button>
+          <button class="s-nav-item" type="button"><span>&#128101;</span>Schülerinnen</button>
+          <button class="s-nav-item" type="button"><span>&#128100;</span>Kolleginnen</button>
+          <button class="s-nav-item" type="button"><span>&#8599;</span>Einladen</button>
+        </aside>
+
+        <div class="splint__main">
+          <div class="s-card s-profile">
+            <div class="s-avatar" aria-hidden="true">
+              <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="#fff"/><circle cx="50" cy="38" r="18" fill="#f6b24e"/><circle cx="50" cy="98" r="30" fill="#f6b24e"/></svg>
+            </div>
+            <div class="s-profile-info">
+              <div class="s-field">Max Musterschüler</div>
+              <div class="s-field">Klasse 6b</div>
+              <div class="s-field s-field--sm">Geburtstag: 01.01.2012</div>
+            </div>
+            <div class="s-ring">
+              <svg viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="10"/>
+                <circle class="s-ring__fg" cx="60" cy="60" r="54" fill="none" stroke="#7fd0a6" stroke-width="10" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+              </svg>
+              <div class="s-ring__label">4/6<small>Förderziele<br>erreicht</small></div>
+            </div>
+          </div>
+
+          <div class="s-grid">
+            <div class="s-card s-widget">
+              <h4>Beobachtungen</h4>
+
+              <form id="add-obs-form" class="s-obs-form" hidden>
+                <input id="add-obs-teacher" type="text" placeholder="Lehrer*in" required>
+                <input id="add-obs-text" type="text" placeholder="Beobachtung…" required>
+                <div class="s-obs-form__actions">
+                  <button type="submit" class="s-btn-sm">Speichern</button>
+                  <button type="button" id="add-obs-cancel" class="s-btn-sm s-btn-sm--ghost">Abbrechen</button>
+                </div>
+              </form>
+
+              <ul class="s-obs-list" id="obs-list">
+                <li class="s-obs-row"><div class="s-obs-meta"><strong>Lehrer 3</strong><br>03.03.2020</div><div class="s-obs-text">Max hat gestört</div><span class="s-chevron">⌄</span></li>
+                <li class="s-obs-row s-obs-row--flag"><div class="s-obs-meta"><strong>Lehrer 2</strong><br>02.02.2020</div><div class="s-obs-text">Max kam pünktlich</div><span class="s-chevron">⌄</span></li>
+                <li class="s-obs-row"><div class="s-obs-meta"><strong>Lehrer 1</strong><br>01.01.2020</div><div class="s-obs-text">Max hat Leon geholfen</div><span class="s-chevron">⌄</span></li>
+              </ul>
+            </div>
+
+            <div class="s-card s-widget">
+              <div class="s-widget__head">
+                <h4>Kompetenzen</h4>
+                <span class="s-pill s-pill--ok" id="comp-pill">Im Plan  ✓</span>
+              </div>
+              <div class="s-tabs">
+                <button class="s-tab is-active" type="button" data-metric="emotionale">Emotionale Kompetenz</button>
+                <button class="s-tab" type="button" data-metric="konzentration">Konzentration</button>
+              </div>
+
+              <svg class="s-chart is-active" data-metric="emotionale" viewBox="0 0 400 150" preserveAspectRatio="none">
+                <polyline points="20,113 140,67 260,77 380,25" fill="none" stroke="#f6b24e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="20" cy="113" r="5" fill="#f6b24e"/><circle cx="140" cy="67" r="5" fill="#f6b24e"/><circle cx="260" cy="77" r="5" fill="#f6b24e"/><circle cx="380" cy="25" r="5" fill="#f6b24e"/>
+              </svg>
+              <svg class="s-chart" data-metric="konzentration" viewBox="0 0 400 150" preserveAspectRatio="none">
+                <polyline points="20,87 140,64 260,93 380,70" fill="none" stroke="#f6b24e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="20" cy="87" r="5" fill="#f6b24e"/><circle cx="140" cy="64" r="5" fill="#f6b24e"/><circle cx="260" cy="93" r="5" fill="#f6b24e"/><circle cx="380" cy="70" r="5" fill="#f6b24e"/>
+              </svg>
+
+              <div class="s-chart-axis"><span>Dez 2025</span><span>Mar 2026</span><span>Mai 2026</span><span>Jul 2026</span></div>
+              <p class="s-chart-caption" id="comp-caption">Fortschritt von 4 Punkten in der Fremdbeurteilung - Aktuell 6/7</p>
+            </div>
+
+            <div class="s-card s-widget s-widget--wide">
+              <h4>Förderziele</h4>
+              <ul class="s-goals">
+                <li><span class="s-goal-cat">Lesen und Schreiben</span><span class="s-goal-text">Max kann sein Lieblingsbuch eigenständig lesen</span><span class="s-goal-date">Dez 2025</span><span class="s-goal-status is-done">✓</span></li>
+                <li><span class="s-goal-cat">Emotionale Kompetenz</span><span class="s-goal-text">Max kann seine Gefühle benennen</span><span class="s-goal-date">Jul 2026</span><span class="s-goal-status is-open">✕</span></li>
+                <li><span class="s-goal-cat">Konzentration</span><span class="s-goal-text">Max beendet seine Aufgaben</span><span class="s-goal-date">Dez 2025</span><span class="s-goal-status is-done">✓</span></li>
+              </ul>
+            </div>
+
+            <div class="s-actions">
+              <button type="button" class="s-btn-wide" id="add-obs-btn">Beobachtung hinzufügen <span>+</span></button>
+              <button type="button" class="s-btn-wide">Eltern kontaktieren <span>&#9742;</span></button>
+            </div>
+          </div>
+          <p class="s-updated">Zuletzt bearbeitet am: 25.06.2026</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container ds-grid" style="margin-top:34px;" data-reveal>
+    <div class="ds-card">
+      <h4>Header</h4>
+      <p class="ds-note" data-i18n="note.header">Foto oder Avatar zur schnellen Wiedererkennung, die wichtigsten persönlichen Daten und der Förderplan-Status auf einen Blick.</p>
+    </div>
+    <div class="ds-card">
+      <h4>Beobachtungen</h4>
+      <p class="ds-note" data-i18n="note.obs">Chronologisch geordnet und mit Zeitstempel versehen, mit Farbcodierung, damit Beobachtungen schneller eingeordnet werden können - positiv, negativ, neutral.</p>
+    </div>
+    <div class="ds-card">
+      <h4>Kompetenzen</h4>
+      <p class="ds-note" data-i18n="note.comp">Tab-Navigation zwischen den Metriken, ohne den Kontext zu verlieren. Grün/Rot signalisiert im Plan vs. Aufmerksamkeit nötig. Psychologische Kennwerte im zeitlichen Verlauf dargestellt.</p>
+    </div>
+    <div class="ds-card">
+      <h4>Förderplan</h4>
+      <p class="ds-note" data-i18n="note.plan">Kategorisiert nach Förderbereich, mit Zeitstempel für Erstellung oder Erreichung, mit Status-Indikator auf einen Blick.</p>
+    </div>
+  </div>
+</section>
+
+<article class="prose" style="max-width:760px">
+  <h2 data-reveal data-i18n="h.reflection">Reflexion</h2>
+  <p data-reveal data-i18n="p.reflection">In dieser Case Study habe ich mich darauf konzentriert, wie Funktionen psychologische Prozesse beeinflussen. Für eine echte Validierung würde ich:</p>
+  <ul style="color:var(--ink-soft); font-size:1.1rem;" data-reveal data-i18n="list.reflection">
+    <li>Nutzerforschung mit Lehrkräften durchführen - nicht hypothetisch</li>
+    <li>Beobachten, wie erfahrenes Personal tatsächlich Entscheidungen trifft</li>
+    <li>Diese Erkenntnisse direkt in die Metriken übersetzen</li>
+  </ul>
+  <p data-reveal data-i18n="p.reflectionClose">Das würde die wichtigste Frage beantworten: Welche Daten brauchen Lehrkräfte wirklich?</p>
+</article>
+
+<footer class="site-footer">
+  <div class="footer__grid">
+    <div data-reveal>
+      <h2 data-i18n="footer.heading">Lass uns reden.</h2>
+      <p data-i18n="footer.sub">Product, UX, KI oder Forschung - ich freue mich immer über ein gutes Gespräch.</p>
+      <div class="social-list">
+        <a href="https://www.linkedin.com/in/felix-niebisch-linked/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Felixniebisch" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.instagram.com/niesnitch/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__meta">© 2026 Felix Niebisch</div>
+  </div>
+</footer>
+
+<script>
+window.I18N_EN = {
+  'hero.eyebrow': 'Case study · designed in 8 hours',
+  'hero.h1': 'Splint - a dashboard for Förderplanung',
+  'hero.sub': 'Four metrics, one student, on one screen - a live design exercise built for my application as Junior UX Designer at Inklusion-Digital.',
+  'back': '&larr; Back to all work',
+  'h.context': 'Context',
+  'p.context': 'For this case study I wanted to invite you along on a design process - from first idea to a high-fidelity layout - all inside a single working day, as part of my application for Inklusion-Digital.',
+  'h.research': 'Research',
+  'p.research': "I started by getting an overview of Inklusion-Digital's existing system: public screens and available information went straight into a FigJam board, alongside my own first reactions.",
+  'quote.research': 'The central question an interface like this has to answer: which metrics lead to easier - and ideally better - decisions in Förderplanung? If a dashboard puts a student at its center, whatever it shows has to communicate progress at a glance.',
+  'p.researchLead': 'From there it became clear what Splint should actually do:',
+  'list.goals': '<li>Make learning potential visible</li><li>Simplify individualized support</li><li>Make the use of digital tools accessible</li>',
+  'h.scope': 'Setting the scope',
+  'p.scope': 'At this point I decided to place the project inside the individualized overview of a single student profile.',
+  'h.exists': 'What already exists',
+  'p.exists': 'The next question was which information already exists to build on: observations, external assessments, attendance, contact details, and the support plan with its goals.',
+  'h.requirements': 'User requirements',
+  'p.requirements': "The real question is which metrics represent the support process with the least distortion. In an actual process I'd take this straight to teachers and work out the core metrics together in interviews - here, I used a different shortcut and sat down with Claude instead. After some back and forth, I landed on four:",
+  'metric.1': '<strong>Zielbearbeitungsquote</strong> - goal engagement rate',
+  'metric.2': '<strong>Zielerreichungsquote</strong> - goal achievement rate',
+  'metric.3': '<strong>Teilnahmekonsistenz</strong> - participation consistency',
+  'metric.4': '<strong>Beobachteter Fortschritt</strong> - observed progress',
+  'p.requirementsClose': 'Behind it sat one guiding question: what do teachers need to quickly understand - and adjust - the support process?',
+  'h.modelling': 'Modelling',
+  'p.modelling': "Based on the information I'd gathered and the goals I'd set for Splint, I sketched a first prototype by hand.",
+  'h.designSystem': 'Design system',
+  'p.designSystem': 'From there I built a design system that puts clarity, consistency, and usability first.',
+  'h4.colorSystem': 'Colour system',
+  'swatch.headerText': 'Header &amp; text',
+  'swatch.background': 'Background',
+  'swatch.accent': 'Accent',
+  'h4.typography': 'Typography - Roboto',
+  'type.headlines': 'Large headlines',
+  'type.headings': 'Headings',
+  'type.body': 'Body text',
+  'type.annotations': 'Annotations',
+  'demo.eyebrow': 'Live recreation, not a screenshot',
+  'demo.heading': 'The final interface',
+  'demo.sub': "This is a working rebuild of Splint's dashboard. Switch between competencies, or log a new observation the way a teacher would.",
+  'note.header': 'Photo or avatar for fast recognition, the key personal details, and the support-plan status at a glance.',
+  'note.obs': 'Chronologically ordered and timestamped, with colour-coding so observations can be classified faster - positive, negative, neutral.',
+  'note.comp': 'Tab navigation between metrics without losing context. Green / red status signals on-track vs. needs-attention. Psychological metrics plotted over time.',
+  'note.plan': 'Categorised by support area, timestamped for creation or completion, with a status indicator at a glance.',
+  'h.reflection': 'Reflection',
+  'p.reflection': 'In this case study I focused on how functions shape psychological processes. For real validation, I would:',
+  'list.reflection': '<li>Run user research with teachers - not hypothetically</li><li>Observe how experienced staff actually make decisions</li><li>Translate those insights directly into the metrics</li>',
+  'p.reflectionClose': 'That would answer the question that matters most: what data do teachers really need?',
+};
+</script>
+<script src="../js/main.js?v=2"></script>
+<script src="../js/dashboard-demo.js?v=2"></script>
+<script src="../js/i18n.js?v=2"></script>
+<script data-goatcounter="https://felixniebisch.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

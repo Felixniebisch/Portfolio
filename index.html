@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Felix Niebisch - Kognition &amp; Design</title>
+<meta name="description" content="Felix Niebisch - UX- &amp; Produktdesigner aus Hamburg an der Schnittstelle zwischen Menschen und den Systemen, die sie nutzen.">
+<link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav__inner">
+    <a href="index.html" data-i18n="nav.home">Startseite</a>
+    <a href="about.html" data-i18n="nav.about">Über mich</a>
+    <a href="resume.html" data-i18n="nav.resume">Lebenslauf</a>
+    <div class="lang-toggle">
+      <button type="button" data-lang="de" class="is-active">DE</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero__lava" aria-hidden="true">
+    <span class="blob blob--a"></span>
+    <span class="blob blob--b"></span>
+    <span class="blob blob--d"></span>
+  </div>
+  <div class="hero__grid">
+    <div>
+      <h1 data-i18n="hero.h1">Hallo, ich bin Felix!</h1>
+      <p data-i18n="hero.p">Ich bin ein kreativer Kopf aus Hamburg, der sich für alles rund um folgende Themen begeistert:</p>
+      <div class="tag" data-i18n="hero.tag">Kognition &amp; Design</div>
+    </div>
+    <div class="hero__photo">
+      <div class="hero__photo-balls" aria-hidden="true">
+        <span class="ball ball--1"></span>
+        <span class="ball ball--2"></span>
+      </div>
+      <img src="assets/img/felix-portrait.png" alt="Line-art illustration portrait of Felix Niebisch in a puffer jacket">
+    </div>
+  </div>
+</header>
+
+<section class="block">
+  <div class="container section-head" data-reveal>
+    <span class="eyebrow" data-i18n="work.eyebrow">UX &amp; Produkt</span>
+    <h2 data-i18n="work.heading">Ausgewählte Arbeiten</h2>
+  </div>
+
+  <div class="container">
+    <div class="work-toggle" role="tablist" aria-label="Ausgewählte Arbeiten filtern" data-reveal>
+      <button type="button" class="is-active" data-target="case-study" role="tab" aria-selected="true" data-i18n="work.toggle.caseStudies">Case Studies</button>
+      <button type="button" data-target="project" role="tab" aria-selected="false" data-i18n="work.toggle.projects">Projekte</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="work-group" data-group="case-study">
+      <a class="project-card project-card--heame" href="case-studies/heame.html" data-reveal>
+        <div class="project-card__content">
+          <div class="project-card__eyebrow" data-i18n="card.heame.eyebrow">Case Study</div>
+          <h3>Heame</h3>
+          <p class="desc" data-i18n="card.heame.desc">Komplexe Gesundheitsdaten in einem verspielten Score vereinfacht.</p>
+          <span class="btn"><span data-i18n="card.learnMore">Mehr erfahren</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </div>
+        <img class="project-card__visual" src="assets/img/heame-screen-2.png" alt="Heame daily overview screen">
+      </a>
+
+      <a class="project-card project-card--splint" href="case-studies/inklusion-digital.html" data-reveal>
+        <div class="project-card__content">
+          <div class="project-card__eyebrow" data-i18n="card.splint.eyebrow">Case Study · in 8 Stunden designt</div>
+          <h3>Splint</h3>
+          <p class="desc" data-i18n="card.splint.desc">Ein Förderplanungs-Dashboard, das vier Metriken - und den Fortschritt einer Schülerin - auf einen Bildschirm bringt.</p>
+          <span class="btn"><span data-i18n="card.learnMore">Mehr erfahren</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </div>
+        <img class="project-card__visual" src="assets/img/splint-card.png" alt="Splint dashboard interface preview">
+      </a>
+    </div>
+
+    <div class="work-group" data-group="project" hidden>
+      <a class="project-card project-card--uxr" href="projects/uxr-community.html" data-reveal>
+        <div class="project-card__content">
+          <div class="project-card__eyebrow" data-i18n="card.uxr.eyebrow">Projekt · angewandte Forschung</div>
+          <h3>UXR Cluster Space</h3>
+          <p class="desc" data-i18n="card.uxr.desc">1.300 echte UX-Researcher, 18 Dimensionen, fünf Typen - und wo ich quantitativ hineinpasse.</p>
+          <span class="btn"><span data-i18n="card.learnMore">Mehr erfahren</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </div>
+        <img class="project-card__visual" src="assets/img/uxr-card.png" alt="UXR Cluster Space radar chart preview">
+      </a>
+
+      <a class="project-card project-card--thesis" href="projects/master-thesis.html" data-reveal>
+        <div class="project-card__content">
+          <div class="project-card__eyebrow" data-i18n="card.thesis.eyebrow">Projekt · Masterarbeit</div>
+          <h3 data-i18n="card.thesis.title">Intrinsische Motivation erkennen durch LLM-Verarbeitung</h3>
+          <p class="desc" data-i18n="card.thesis.desc">Kann GPT-4 Motivation zwischen den Zeilen lesen? Eine bewertete Pipeline stellt sich dem Test gegen eine validierte psychometrische Baseline.</p>
+          <span class="btn"><span data-i18n="card.learnMore">Mehr erfahren</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </div>
+        <svg class="project-card__visual project-card__visual--icon" viewBox="0 0 300 300" fill="none" stroke="#12233f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M30 60c0-11 9-20 20-20h110c11 0 20 9 20 20v70c0 11-9 20-20 20H90l-35 32 3-32H50c-11 0-20-9-20-20z"/>
+          <path d="M55 60h100M55 82h130M55 104h80"/>
+          <path d="M185 150c15 12 30 12 45 0" stroke-dasharray="4 7"/>
+          <circle cx="235" cy="150" r="55"/>
+          <path d="M235 150 235 105M235 150 269 174M235 150 201 174M235 150 190 140M235 150 280 140" stroke-dasharray="0"/>
+          <circle cx="235" cy="105" r="4" fill="#12233f"/>
+          <circle cx="269" cy="174" r="4" fill="#12233f"/>
+          <circle cx="201" cy="174" r="4" fill="#12233f"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer__grid">
+    <div data-reveal>
+      <h2 data-i18n="footer.heading">Lass uns reden.</h2>
+      <p data-i18n="footer.sub">Product, UX, KI oder Forschung - ich freue mich immer über ein gutes Gespräch.</p>
+      <div class="social-list">
+        <a href="https://www.linkedin.com/in/felix-niebisch-linked/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Felixniebisch" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.instagram.com/niesnitch/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__meta">© 2026 Felix Niebisch</div>
+  </div>
+</footer>
+
+<script>
+window.I18N_EN = {
+  'work.eyebrow': 'UX &amp; product',
+  'work.heading': 'Selected work',
+  'work.toggle.caseStudies': 'Case studies',
+  'work.toggle.projects': 'Projects',
+  'card.heame.eyebrow': 'Case study',
+  'card.heame.desc': 'Simplifying complex health data into one playful score.',
+  'card.splint.eyebrow': 'Case study · designed in 8 hours',
+  'card.splint.desc': "A Förderplanung dashboard that puts four metrics - and a student's progress - on one screen.",
+  'card.uxr.eyebrow': 'Project · applied research',
+  'card.uxr.desc': '1,300 real UX researchers, 18 dimensions, five types - and where I quantitatively fit among them.',
+  'card.thesis.eyebrow': 'Project · master thesis',
+  'card.thesis.title': 'Recognizing Intrinsic Motivation Through LLM Processing',
+  'card.thesis.desc': 'Can GPT-4 read motivation between the lines? A scored pipeline that puts it to the test against a validated psychometric baseline.',
+  'card.learnMore': 'Learn more',
+  'hero.h1': "Hi, I'm Felix!",
+  'hero.p': "I'm a Hamburg based creative mind, that loves all things related to:",
+  'hero.tag': 'Cognition &amp; Design',
+};
+</script>
+<script src="js/main.js?v=2"></script>
+<script src="js/i18n.js?v=2"></script>
+<script data-goatcounter="https://felixniebisch.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
