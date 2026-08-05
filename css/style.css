@@ -351,17 +351,14 @@ section.block { padding: 78px var(--pad); }
 }
 .project-card--splint .project-card__visual { right: 2%; width: 42%; }
 .project-card--heame .project-card__visual { width: 26%; max-width: 220px; right: 6%; transform: translateY(-50%) rotate(3deg); filter: drop-shadow(0 20px 34px rgba(20,40,20,.22)); }
-.project-card__visual--icon { width: 30%; max-width: 240px; right: 4%; opacity: .5; transform: translateY(-50%) rotate(0deg); }
 .project-card__content { position: relative; z-index: 2; max-width: 55%; }
-.project-card--thesis .project-card__content { max-width: 62%; }
+.project-card--thesis .project-card__content { max-width: 100%; }
 
 @media (max-width: 760px) {
   .project-card__visual { display: block; position: static; transform: none; width: 100%; max-width: none; margin-top: 28px; }
   .project-card--splint .project-card__visual { width: 100%; }
   .project-card--heame .project-card__visual { width: 70%; max-width: 260px; margin-left: auto; margin-right: auto; transform: none; }
-  .project-card__visual--icon { max-width: 200px; margin-left: auto; margin-right: auto; }
   .project-card__content { max-width: 100%; }
-  .project-card--thesis .project-card__content { max-width: 100%; }
 }
 
 /* ---------- work toggle ---------- */
