@@ -334,11 +334,11 @@ section.block { padding: 78px var(--pad); }
 .project-card--splint { background: linear-gradient(135deg, var(--splint-1), var(--splint-2) 75%); }
 .project-card--uxr { background: linear-gradient(135deg, var(--uxr-1), var(--uxr-2) 75%); }
 .project-card--thesis { background: linear-gradient(135deg, var(--thesis-1), var(--thesis-2) 85%); }
-.project-card__eyebrow { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: rgba(20,20,25,.62); margin-bottom: 18px; }
+.project-card__eyebrow { font-family: var(--serif); font-style: italic; font-size: 1.2rem; font-weight: 600; color: rgba(20,20,25,.85); margin-bottom: 18px; }
 .project-card h3 { font-size: clamp(2.4rem, 6vw, 3.6rem); margin-bottom: 10px; }
 .project-card--thesis h3 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); line-height: 1.15; }
-.project-card p.desc { max-width: 40ch; color: rgba(20,20,25,.72); font-size: 1.08rem; margin-bottom: 26px; }
-.project-card--thesis p.desc { color: rgba(10,20,40,.72); }
+.project-card p.desc { max-width: 40ch; color: rgba(15,15,20,.88); font-weight: 500; font-size: 1.08rem; margin-bottom: 26px; }
+.project-card--thesis p.desc { color: rgba(10,20,40,.88); }
 .project-card__visual {
   position: absolute;
   right: -4%;
@@ -346,16 +346,19 @@ section.block { padding: 78px var(--pad); }
   transform: translateY(-50%) rotate(2deg);
   width: 46%;
   max-width: 460px;
+  opacity: .5;
   pointer-events: none;
 }
 .project-card--splint .project-card__visual { right: 2%; width: 42%; }
 .project-card--heame .project-card__visual { width: 26%; max-width: 220px; right: 6%; transform: translateY(-50%) rotate(3deg); filter: drop-shadow(0 20px 34px rgba(20,40,20,.22)); }
-.project-card__visual--icon { width: 30%; max-width: 240px; right: 4%; opacity: .85; transform: translateY(-50%) rotate(0deg); }
+.project-card__visual--icon { width: 30%; max-width: 240px; right: 4%; opacity: .5; transform: translateY(-50%) rotate(0deg); }
 .project-card__content { position: relative; z-index: 2; max-width: 55%; }
 .project-card--thesis .project-card__content { max-width: 62%; }
 
 @media (max-width: 760px) {
-  .project-card__visual { position: static; transform: none; width: 100%; margin-top: 28px; }
+  .project-card__visual { display: block; position: static; transform: none; width: 100%; max-width: none; margin-top: 28px; }
+  .project-card--splint .project-card__visual { width: 100%; }
+  .project-card--heame .project-card__visual { width: 70%; max-width: 260px; margin-left: auto; margin-right: auto; transform: none; }
   .project-card__visual--icon { max-width: 200px; margin-left: auto; margin-right: auto; }
   .project-card__content { max-width: 100%; }
   .project-card--thesis .project-card__content { max-width: 100%; }
