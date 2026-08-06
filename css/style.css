@@ -336,7 +336,7 @@ section.block { padding: 78px var(--pad); }
 .project-card--thesis { background: linear-gradient(135deg, var(--thesis-1), var(--thesis-2) 85%); }
 .project-card__eyebrow { font-family: var(--serif); font-style: italic; font-size: 1.2rem; font-weight: 600; color: rgba(20,20,25,.85); margin-bottom: 18px; }
 .project-card h3 { font-size: clamp(2.4rem, 6vw, 3.6rem); margin-bottom: 10px; }
-.project-card--thesis h3 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); line-height: 1.15; }
+.project-card--thesis h3, .project-card--uxr h3 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); line-height: 1.15; }
 .project-card p.desc { max-width: 40ch; color: rgba(15,15,20,.88); font-weight: 500; font-size: 1.08rem; margin-bottom: 26px; }
 .project-card--thesis p.desc { color: rgba(10,20,40,.88); }
 .project-card__visual {

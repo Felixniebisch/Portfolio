@@ -50,13 +50,13 @@
 
   <div class="container">
     <div class="work-toggle" role="tablist" aria-label="Ausgewählte Arbeiten filtern" data-reveal>
-      <button type="button" class="is-active" data-target="case-study" role="tab" aria-selected="true" data-i18n="work.toggle.caseStudies">Case Studies</button>
-      <button type="button" data-target="project" role="tab" aria-selected="false" data-i18n="work.toggle.projects">Projekte</button>
+      <button type="button" data-target="case-study" role="tab" aria-selected="false" data-i18n="work.toggle.caseStudies">Case Studies</button>
+      <button type="button" class="is-active" data-target="project" role="tab" aria-selected="true" data-i18n="work.toggle.projects">Projekte</button>
     </div>
   </div>
 
   <div class="container">
-    <div class="work-group" data-group="case-study">
+    <div class="work-group" data-group="case-study" hidden>
       <a class="project-card project-card--heame" href="case-studies/heame.html" data-reveal>
         <div class="project-card__content">
           <div class="project-card__eyebrow" data-i18n="card.heame.eyebrow">Case Study</div>
@@ -82,12 +82,12 @@
       </a>
     </div>
 
-    <div class="work-group" data-group="project" hidden>
+    <div class="work-group" data-group="project">
       <a class="project-card project-card--uxr" href="projects/uxr-community.html" data-reveal>
         <div class="project-card__content">
           <div class="project-card__eyebrow" data-i18n="card.uxr.eyebrow">Projekt · angewandte Forschung</div>
-          <h3>UXR Cluster Space</h3>
-          <p class="desc" data-i18n="card.uxr.desc">1.300 echte UX-Researcher, 18 Dimensionen, fünf Typen - und wo ich quantitativ hineinpasse.</p>
+          <h3 data-i18n="card.uxr.title">Die verschiedenen Typen von UX-Researchern</h3>
+          <p class="desc" data-i18n="card.uxr.desc">Ich habe 1.300 echte Beiträge von UX-Researchern analysiert, um herauszufinden, welche Arbeitstypen es in diesem Berufsfeld gibt - und wo ich selbst hineinpasse.</p>
           <span class="btn"><span data-i18n="card.learnMore">Mehr erfahren</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg>
           </span>
@@ -134,7 +134,8 @@ window.I18N_EN = {
   'card.splint.eyebrow': 'Case study',
   'card.splint.desc': "A support-planning dashboard that puts four metrics - and a student's progress - on one screen.",
   'card.uxr.eyebrow': 'Project · applied research',
-  'card.uxr.desc': '1,300 real UX researchers, 18 dimensions, five types - and where I quantitatively fit among them.',
+  'card.uxr.title': 'The Different Types of UX Researchers',
+  'card.uxr.desc': 'I analyzed 1,300 real posts from UX researchers to find out what different types of people work in this field - and where I fit in myself.',
   'card.thesis.eyebrow': 'Project · master thesis',
   'card.thesis.title': 'Recognizing Intrinsic Motivation Through LLM Processing',
   'card.thesis.desc': 'Can GPT-4 read motivation between the lines? A scored pipeline that puts it to the test against a validated psychometric baseline.',
