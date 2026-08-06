@@ -11,7 +11,6 @@
   .cs-hero--uxr .eyebrow { color: rgba(31,58,95,.65); }
   .cs-hero--uxr h1 { color: var(--uxr-dark); }
   .cs-hero--uxr .sub { color: rgba(31,58,95,.78); }
-
   .cluster-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 16px; margin: 30px 0 8px; }
   .cluster-card { border-radius: var(--radius-md); padding: 20px 22px; background: var(--bg-raised); border: 1px solid var(--line); }
   .cluster-card h4 { margin: 0 0 8px; font-size: 1.02rem; color: var(--uxr-dark); }
@@ -19,7 +18,30 @@
   .cluster-card--me { border-color: var(--uxr-dark); box-shadow: 0 0 0 2px rgba(31,58,95,.12) inset; }
   html[lang="de"] .cluster-card--me h4::after { content: ' - mein Typ'; font-weight: 400; font-style: italic; color: var(--uxr-dark); font-size: .8rem; }
   html[lang="en"] .cluster-card--me h4::after { content: ' - closest to me'; font-weight: 400; font-style: italic; color: var(--uxr-dark); font-size: .8rem; }
-
+  .dim-table { width: 100%; border-collapse: collapse; margin: 18px 0 6px; font-size: .9rem; }
+  .dim-table th, .dim-table td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+  .dim-table th { background: var(--bg-raised); color: var(--uxr-dark); white-space: nowrap; font-size: .85rem; }
+  .dim-table td { color: var(--ink-soft); line-height: 1.5; }
+  .example-row { margin: 18px 0 6px; border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; font-size: .85rem; background: var(--bg-raised); }
+  .example-row .er-head { background: rgba(31,58,95,.06); padding: 10px 14px; color: var(--uxr-dark); font-weight: 600; font-size: .82rem; }
+  .example-row .er-post { padding: 12px 14px; color: var(--ink-soft); font-style: italic; border-bottom: 1px solid var(--line); line-height: 1.5; }
+  .example-row .er-body { padding: 16px 14px 4px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; }
+  .example-row .er-section-label { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--uxr-dark); opacity: .7; margin-bottom: 14px; }
+  .example-row .er-trait { margin-bottom: 16px; }
+  .example-row .er-trait:last-child { margin-bottom: 0; }
+  .example-row .er-trait-poles { display: flex; justify-content: space-between; gap: 8px; font-size: .78rem; color: var(--ink-soft); margin-bottom: 7px; }
+  .example-row .er-trait-poles span:last-child { text-align: right; }
+  .example-row .er-trait-track { position: relative; height: 5px; border-radius: 999px; background: var(--line); margin-bottom: 6px; }
+  .example-row .er-trait-track::before { content: ''; position: absolute; left: 50%; top: -3px; width: 1px; height: 11px; background: var(--line); }
+  .example-row .er-trait-mark { position: absolute; top: 50%; width: 13px; height: 13px; border-radius: 50%; background: var(--uxr-dark); border: 2px solid var(--bg-raised); box-shadow: 0 1px 3px rgba(20,20,20,.28); transform: translate(-50%, -50%); }
+  .example-row .er-trait-meta { font-size: .74rem; color: var(--ink-faint); font-style: italic; }
+  .example-row .er-tools { display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start; }
+  .example-row .er-tool { font-size: .76rem; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink-faint); background: var(--bg-raised); }
+  .example-row .er-tool.is-hit { color: #fff; background: var(--uxr-dark); border-color: var(--uxr-dark); font-weight: 600; }
+  .example-row .er-tool.is-hit::before { content: '✓ '; }
+  .example-row .er-legend { padding: 12px 14px; border-top: 1px solid var(--line); font-size: .78rem; color: var(--ink-faint); font-style: italic; }
+  @media (max-width: 560px) { .example-row .er-body { grid-template-columns: 1fr; gap: 22px; } }
+  .table-caption { font-size: .82rem; color: var(--ink-faint); margin: 4px 0 22px; }
   .embed-frame {
     background: #eef2f6;
     border-radius: var(--radius-lg);
@@ -27,20 +49,17 @@
     max-width: var(--container);
     margin: 0 auto;
   }
-  .embed-frame iframe {
-    width: 100%;
-    height: 900px;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-md);
-    background: #fafafa;
-    display: block;
+  .embed-frame iframe { width:100%; height:900px; border:1px solid var(--line);
+    border-radius:var(--radius-md); background:#fafafa; display:block; }
+  @media (max-width:700px){
+    .embed-frame { padding:6px; }
+    .embed-frame iframe { height:78vh; min-height:560px; }
   }
   .embed-note { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; max-width: var(--container); margin: 14px auto 0; padding: 0 var(--pad); color: var(--ink-faint); font-size: .88rem; }
   .embed-note a { font-weight: 600; color: var(--uxr-dark); }
 </style>
 </head>
 <body>
-
 <nav class="site-nav">
   <div class="site-nav__inner">
     <a href="../index.html" data-i18n="nav.home">Startseite</a>
@@ -52,7 +71,6 @@
     </div>
   </div>
 </nav>
-
 <header class="cs-hero cs-hero--uxr">
   <div class="cs-hero__inner">
     <span class="eyebrow" data-i18n="hero.eyebrow">Case Study · angewandte Forschung</span>
@@ -60,43 +78,97 @@
     <p class="sub" data-i18n="hero.sub">1.300 echte UX-Researcher, bewertet auf 18 Dimensionen und sortiert in fünf Typen - dann habe ich mein eigenes Profil in denselben Raum gestellt, um quantitativ zu sehen, wo ich hineinpasse.</p>
   </div>
 </header>
-
 <article class="prose" style="max-width:760px">
   <a class="back-link" href="../index.html" data-reveal data-i18n="back">&larr; Zurück zur Übersicht</a>
 
   <h2 data-reveal data-i18n="h.context">Kontext</h2>
-  <p data-reveal data-i18n="p.context">Auf Jobsuche im Bereich UX Research bin ich immer wieder auf dieselbe vage Frage gestoßen - von beiden Seiten des Tisches: Was für ein UX-Researcher bin ich eigentlich, und wonach sucht eine bestimmte Rolle wirklich? Jobtitel und Buzzwords beantworten das nicht. Daten vielleicht schon. Also habe ich mich entschieden, es empirisch zu beantworten: Wer arbeitet in UX Research, und was für Menschen sind das?</p>
+  <p data-reveal data-i18n="p.context">Auf Jobsuche im UX-Research-Umfeld ist mir aufgefallen, wie viele unterschiedliche Hintergründe und Spezialisierungen es in diesem Feld gibt. Ganz automatisch begann ich mich zu fragen: Wie passe ich in dieses Bild - und wie finde ich gezielt Unternehmen, die genau das Profil suchen, das ich mitbringe und in das ich hineinwachsen will? Aus dieser Frage wurde ein Projekt mit dem Ziel, die Antwort empirisch zu finden: Wer arbeitet in UX Research, welche Typen von Menschen gibt es dort - und wo stehe ich?</p>
 
   <h2 data-reveal data-i18n="h.method">Methode</h2>
-  <p data-reveal data-i18n="p.method1">Ich habe 1.300 echte Beiträge aus Reddits r/UXResearch analysiert - der weltweit größten UX-Research-Community - veröffentlicht zwischen November 2025 und Juli 2026. Jede Person wird auf 18 Dimensionen beschrieben: was ihr wichtig ist (menschliche vs. wirtschaftliche Wirkung, Ästhetik vs. Performance, Bedeutung vs. Mechanik …), wie sie arbeitet (qualitativ vs. quantitativ, methodisch vs. kreativ, reflektiert vs. handlungsorientiert …) und zu welchen Tools sie greift (Design, Analyse, Recruiting &amp; Testing, KI-Assistenten …).</p>
-  <p data-reveal data-i18n="p.method2">Menschen mit ähnlichen Profilen wurden per k-Means-Clustering auf standardisierten Werten gruppiert. Eine methodische Entscheidung, hinter der ich stehe: Dimensionen ohne Evidenz werden pro Person ausgeschlossen statt geraten. Fehlende Daten bleiben fehlend - sie werden nicht stillschweigend zu etwas aufgefüllt, das vollständiger aussieht, als es ist.</p>
+  <p data-reveal data-i18n="p.method1">Meine Idee war, vorhandene Daten auszuwerten, in denen UX-Researcher über ihren Arbeitsalltag sprechen. Die zugänglichste Quelle war Reddit: Das <a href="https://arctic-shift.photon-reddit.com" target="_blank" rel="noopener">Arctic-Shift-Projekt</a> stellt historische Daten einzelner Subreddits leicht abrufbar bereit. Ich analysierte alle Beiträge aus <a href="https://www.reddit.com/r/UXResearch/" target="_blank" rel="noopener">r/UXResearch</a> - der weltweit größten UX-Research-Community - aus dem Zeitraum November 2025 bis Juli 2026: 1.300 Posts. Ein Regex-Keyword-Klassifikator erfasste erwähnte Tools und Methoden; die psychologischen Merkmale wurden über Lexikon-Scoring plus LLM-gestützte Codierung erschlossen und stichprobenweise von Hand validiert. Am Ende stand jede Person auf 18 Dimensionen beschrieben - von Wertorientierungen über den Arbeitsstil bis zur Tool-Nutzung, jeweils als bipolare Skalen oder Nutzungsindikatoren:</p>
+
+  <table class="dim-table" data-reveal>
+    <tr>
+      <th data-i18n="tbl.h1">Werte &amp; Interessen</th>
+      <td data-i18n="tbl.r1">menschliche ↔ wirtschaftliche Wirkung · Ästhetik ↔ Performance · Tiefe im Einzelfall ↔ Muster in großer Zahl · Bedeutung ↔ Mechanik · Erkenntnis ↔ Lösung</td>
+    </tr>
+    <tr>
+      <th data-i18n="tbl.h2">Arbeitsstil</th>
+      <td data-i18n="tbl.r2">qualitativ ↔ quantitativ · Sicherheit ↔ Initiative · methodisch ↔ kreativ · kollaborativ ↔ eigenständig · Bewährtes ↔ Neues · reflektiert ↔ handlungsorientiert · Erfahrungslevel</td>
+    </tr>
+    <tr>
+      <th data-i18n="tbl.h3">Tool-Nutzung</th>
+      <td data-i18n="tbl.r3">Fragebögen · Design · Organisation · Analyse · Recruiting/Testing · KI-Assistenten</td>
+    </tr>
+  </table>
+  <p class="table-caption" data-reveal data-i18n="tbl.cap">Die 18 Dimensionen des Profilraums.</p>
+
+  <div class="example-row" data-reveal>
+    <div class="er-head" data-i18n="ex.head">So sieht ein codierter Beitrag als Datenzeile aus</div>
+    <div class="er-post" data-i18n="ex.post">&bdquo;Best way to handle follow-up questions in a CSAT survey? I'm building a CSAT survey in SurveyMonkey and I'm unsure how to structure the open-ended follow-up question &hellip;&ldquo;</div>
+    <div class="er-body">
+      <div class="er-section">
+        <div class="er-section-label" data-i18n="ex.traitsLabel">Werte &amp; Arbeitsstil</div>
+
+        <div class="er-trait">
+          <div class="er-trait-poles"><span data-i18n="ex.trait1.a">qualitativ</span><span data-i18n="ex.trait1.b">quantitativ</span></div>
+          <div class="er-trait-track"><span class="er-trait-mark" style="left:75%"></span></div>
+          <div class="er-trait-meta" data-i18n="ex.evidence.strong">starke Evidenz</div>
+        </div>
+
+        <div class="er-trait">
+          <div class="er-trait-poles"><span data-i18n="ex.trait2.a">Einzelfall</span><span data-i18n="ex.trait2.b">Muster/Skala</span></div>
+          <div class="er-trait-track"><span class="er-trait-mark" style="left:75%"></span></div>
+          <div class="er-trait-meta" data-i18n="ex.evidence.medium">mittlere Evidenz</div>
+        </div>
+
+        <div class="er-trait">
+          <div class="er-trait-poles"><span data-i18n="ex.trait3.a">Sicherheit</span><span data-i18n="ex.trait3.b">Initiative</span></div>
+          <div class="er-trait-track"><span class="er-trait-mark" style="left:25%"></span></div>
+          <div class="er-trait-meta" data-i18n="ex.evidence.weak">schwache Evidenz</div>
+        </div>
+      </div>
+
+      <div class="er-section">
+        <div class="er-section-label" data-i18n="ex.toolsLabel">Tool-Nutzung</div>
+        <div class="er-tools">
+          <span class="er-tool is-hit" data-i18n="tool.questionnaires">Fragebögen</span>
+          <span class="er-tool" data-i18n="tool.design">Design</span>
+          <span class="er-tool" data-i18n="tool.organization">Organisation</span>
+          <span class="er-tool" data-i18n="tool.analysis">Analyse</span>
+          <span class="er-tool" data-i18n="tool.recruiting">Recruiting</span>
+          <span class="er-tool" data-i18n="tool.ai">KI-Assistenten</span>
+        </div>
+      </div>
+    </div>
+    <div class="er-legend" data-i18n="ex.legend">Ausgegraut = kein Hinweis im Beitrag - das heißt nicht automatisch &bdquo;nicht genutzt&ldquo;.</div>
+  </div>
+
+  <p data-reveal data-i18n="p.method2">Um wiederkehrende Muster zu finden und daraus die Typen zu konstruieren, habe ich ein k-Means-Clustering auf standardisierten Werten eingesetzt. Wegen der Natur unstrukturierter Sprache gilt dabei eine wichtige Regel: Dimensionen ohne Evidenz werden pro Person aus der Analyse ausgeschlossen. Wer ein Tool nicht erwähnt, benutzt es deshalb nicht zwangsläufig nicht - Abwesenheit von Evidenz ist keine Evidenz für Abwesenheit. Fehlende Werte einfach aufzufüllen würde die Daten vollständiger aussehen lassen, als sie sind, und jede Person künstlich in Richtung Durchschnitt ziehen. Lieber ehrliche Lücken als erfundene Werte - das ist weniger Bescheidenheit als Grundvoraussetzung dafür, dass die Cluster echte Menschen abbilden statt Artefakte der Datenaufbereitung.</p>
 
   <h2 data-reveal data-i18n="h.types">Fünf Typen</h2>
   <p data-reveal data-i18n="p.typesLead">Aus den Community-Daten ergaben sich fünf klar unterscheidbare Typen:</p>
-
   <div class="cluster-grid" data-reveal data-reveal-group>
     <div class="cluster-card"><h4 data-i18n="cluster.0.name">KI Enthusiasten und Systemdenker</h4><p data-i18n="cluster.0.desc">Nutzt KI-Assistenten so intensiv wie kein anderer Typ und denkt in Mechanismen und Modellen statt in Einzelfällen: typisches Systemdenken. Eher reflektiert als handlungsgetrieben, mit wenig Fokus auf Recruiting- und Testing-Tools.</p></div>
     <div class="cluster-card"><h4 data-i18n="cluster.1.name">Business Lotsen und Pragmatiker</h4><p data-i18n="cluster.1.desc">Meist senior, mit klarem Blick auf wirtschaftliche Wirkung und mit Abstand der stärksten Nutzung von Organisations- und Stakeholder-Tools. Handelt lieber schnell als lange abzuwägen und arbeitet eng im Team.</p></div>
-    <div class="cluster-card cluster-card--me"><h4 data-i18n="cluster.2.name">Kreative Neuentdecker und Pioniere</h4><p data-i18n="cluster.2.desc">Berufseinsteiger mit ausgeprägt kreativem Methodendesign und starker Nutzung von Design-Tools. Legt Wert auf belastbares Wissen statt schneller Lösungen und geht Dinge reflektiert an. Das ist mein eigener Typ.</p></div>
+    <div class="cluster-card cluster-card--me"><h4 data-i18n="cluster.2.name">Kreative Neuentdecker und Pioniere</h4><p data-i18n="cluster.2.desc">Berufseinsteiger mit ausgeprägt kreativem Methodendesign und starker Nutzung von Design-Tools. Legt Wert auf belastbares Wissen statt schneller Lösungen und geht Dinge reflektiert an.</p></div>
     <div class="cluster-card"><h4 data-i18n="cluster.3.name">User-orientierte Feldforscher (hands-on)</h4><p data-i18n="cluster.3.desc">Klassische Feldforscher: hoher Einsatz von Recruiting- und Testing-Tools, qualitativ statt quantitativ, mit Fokus auf Tiefe im Einzelfall statt auf Skalierung. Ergreift dabei öfter Initiative als die meisten anderen Typen.</p></div>
     <div class="cluster-card"><h4 data-i18n="cluster.4.name">Zahlenmenschen und Excel-Liebhaber</h4><p data-i18n="cluster.4.desc">Quantitativ und skalierungsorientiert, mit der stärksten Nutzung von Fragebogen- und Analyse-Tools aller Typen. Arbeitet eigenständig und mit Blick auf wirtschaftliche Wirkung: die Zahlenmenschen der Community.</p></div>
   </div>
 
   <h2 data-reveal data-i18n="h.myself">Der Blick auf mich selbst</h2>
-  <p data-reveal data-i18n="p.myself1">Ich habe meinen eigenen Lebenslauf und meine Arbeitsweise auf dieselben 18 Dimensionen übertragen und mich selbst in denselben Raum gestellt. Das Ergebnis: <strong>75 % Kreative Neuentdecker und Pioniere</strong>, 19 % Zahlenmenschen und Excel-Liebhaber - ein hybrides Profil zwischen kreativem Entdecken und quantitativem Messen, das in keine der beiden Schubladen sauber hineinpasst.</p>
-  <p data-reveal data-i18n="p.myself2">Diese Aufteilung ist kein Rauschen, sondern das ehrliche Bild. Belegt wird sie durch den Lebenslauf: zwei Jahre klinische Diagnostik, in der Systeme daran gemessen wurden, was sie mit Menschen machen, eine KI-basierte Messmethode, die ich selbst entwickelt und an 245 Teilnehmenden über sechs Skalen validiert habe, eine Einreichung bei einem IEEE-Journal, ein öffentlicher Benchmark-Datensatz und Sicherheit in vier Tool-Bereichen von Figma über Python und SPSS bis Claude Code.</p>
+  <p data-reveal data-i18n="p.myself1">Ich habe meinen eigenen Lebenslauf und meine Arbeitsweise auf dieselben 18 Dimensionen übertragen und mich selbst in denselben Raum gestellt. Das Ergebnis: <strong>75 % Kreativer Neuentdecker und Pionier</strong>, 19 % Zahlenmensch - ein hybrides Profil zwischen kreativem Entdecken und quantitativem Messen, das in keine der beiden Schubladen sauber hineinpasst.</p>
+  <p data-reveal data-i18n="p.myself2">Ehrlich gesagt hätte ich mich selbst näher am Gleichgewicht zwischen Kreativität und Quantifizierung verortet - gearbeitet habe ich bisher deutlich mehr auf der Zahlenseite. Das könnte allerdings schlicht der Berufseinstiegs-Bias sein; bei unüberwachten Algorithmen auf unstrukturierten Daten lässt sich das schwer abschließend beurteilen. Andererseits: Ich arbeite gern kreativ und suche Lösungen auch abseits der Norm. Als Psychologe habe ich mehrere technische Initiativen zur Verbesserung der Diagnostikqualität angestoßen, und im Studium habe ich meine akademischen Projekte lieber selbst entworfen, als vordefinierte Themen meiner Betreuer zu übernehmen. Vielleicht hat der Algorithmus also doch recht - ich bin ein kreativer Entdecker, der Daten nutzt, um die Lösungen für seine Ideen zu finden.</p>
 
-  <h2 data-reveal data-i18n="h.bothSides">Für beide Seiten gebaut</h2>
-  <p data-reveal data-i18n="p.bothSides">Das Tool platziert nicht nur mich - es lässt jede:n das Profil beschreiben, für das gerade eingestellt wird (Erfahrungslevel, welche Tool-Bereiche die Rolle braucht), und zeigt live einen Passungswert gegenüber meinem eigenen Profil, Dimension für Dimension. Es ist Forschungsartefakt und Pitch in einem Interface.</p>
+  <h2 data-reveal data-i18n="h.bothSides">Zum Selbst-Ausprobieren gebaut</h2>
+  <p data-reveal data-i18n="p.bothSides">Das Tool analysiert nicht nur mein Profil: Jede:r kann das Profil beschreiben, das gerade gesucht wird - oder das eigene (Erfahrungslevel, Tool-Nutzung, Arbeitsstil) - und sieht live einen Passungswert gegenüber den fünf Typen und gegenüber meinem Profil, Dimension für Dimension. Falls Sie gerade einstellen: Sie wissen, was zu tun ist. 😉 Es ist Forschungsartefakt und Pitch in einem Interface.</p>
 </article>
-
 <section class="block" style="padding-top:10px;">
   <div class="container section-head" data-reveal>
     <span class="eyebrow" style="justify-content:center" data-i18n="embed.eyebrow">Vollständig interaktiv, live weiter unten</span>
     <h2 data-i18n="embed.heading">Erkunde den Cluster-Raum selbst</h2>
     <p style="max-width:56ch; margin:14px auto 0; color:var(--ink-soft);" data-i18n="embed.sub">Wechsle zwischen den fünf Typen, vergleiche mein Profil mit dem Community-Durchschnitt oder beschreibe dein Wunschprofil und erhalte einen Live-Passungswert.</p>
   </div>
-
   <div class="embed-frame" data-reveal>
     <iframe src="../assets/embeds/uxr-cluster-viz.html" title="UXR Cluster Space - interactive visualization" loading="lazy"></iframe>
   </div>
@@ -105,7 +177,6 @@
     <a href="../assets/embeds/uxr-cluster-viz.html" target="_blank" rel="noopener" data-i18n="embed.open">Vollbild öffnen &rarr;</a>
   </div>
 </section>
-
 <footer class="site-footer">
   <div class="footer__grid">
     <div data-reveal>
@@ -120,39 +191,65 @@
     <div class="footer__meta">© 2026 Felix Niebisch</div>
   </div>
 </footer>
-
 <script>
 window.I18N_EN = {
   'hero.eyebrow': 'Case study · applied research',
   'hero.sub': '1,300 real UX researchers, scored on 18 dimensions and sorted into five types - then I placed my own profile in the same space to see, quantitatively, where I fit.',
   'back': '&larr; Back to all work',
   'h.context': 'Context',
-  'p.context': "While job-hunting in UX research, I kept running into the same vague question from both sides of the table: what kind of UX researcher am I, really - and what kind is a given role actually looking for? Titles and buzzwords don't answer that. Data might. So I set out to answer it empirically: who works in UX research, and what kinds of people are they?",
+  'p.context': 'While job-hunting for UX and UX-research-adjacent roles, I realized how many different backgrounds and specializations exist in this field. Naturally, I started asking myself: how do I fit into this picture - and how can I target companies that are looking for exactly the profile I bring and want to grow into? That question turned into a project to find the answer empirically: who works in UX research, what kinds of people are they, and where do I stand among them?',
   'h.method': 'Method',
-  'p.method1': "I analyzed 1,300 real posts from Reddit's r/UXResearch - the world's largest UX research community - posted between November 2025 and July 2026. Each person is described on 18 dimensions covering what they value (human impact vs. business impact, aesthetics vs. performance, meaning vs. mechanism…), how they work (qualitative vs. quantitative, methodical vs. creative, reflective vs. action-first…), and which tools they reach for (design, analysis, recruiting &amp; testing, AI assistants…).",
-  'p.method2': "People with similar profiles were grouped using k-means clustering on standardized scores. One methodological choice I stand behind: dimensions without evidence are excluded per person rather than guessed. Missing data stays missing - it doesn't get quietly imputed into something that looks more complete than it is.",
+  'p.method1': 'My idea was to analyze existing data of UX researchers talking about their everyday work. The most accessible source was Reddit: the <a href="https://arctic-shift.photon-reddit.com" target="_blank" rel="noopener">Arctic Shift project</a> makes historical data from individual subreddits easy to retrieve. I analyzed every post from <a href="https://www.reddit.com/r/UXResearch/" target="_blank" rel="noopener">r/UXResearch</a> - the world’s largest UX-research community - published between November 2025 and July 2026: 1,300 posts in total. A regex keyword classifier captured the tools and methods people mentioned; the psychological traits were scored through lexicon-based rules plus LLM-assisted coding, with samples validated by hand. In the end, every person was described on 18 dimensions - from values and interests to working style and tool use, each captured as a bipolar scale or a usage indicator:',
+  'tbl.h1': 'Values &amp; interests',
+  'tbl.r1': 'human ↔ business impact · aesthetics ↔ performance · individual depth ↔ patterns at scale · meaning ↔ mechanism · knowledge ↔ solution',
+  'tbl.h2': 'Working style',
+  'tbl.r2': 'qualitative ↔ quantitative · security ↔ initiative · methodical ↔ creative · collaborative ↔ independent · proven ↔ pioneering · reflective ↔ action-first · experience level',
+  'tbl.h3': 'Tool use',
+  'tbl.r3': 'questionnaires · design · organization · analysis · recruiting/testing · AI assistants',
+  'tbl.cap': 'The 18 dimensions of the profile space.',
+  'ex.head': 'What a coded post looks like as a data row',
+  'ex.post': '“Best way to handle follow-up questions in a CSAT survey? I’m building a CSAT survey in SurveyMonkey and I’m unsure how to structure the open-ended follow-up question …”',
+  'ex.traitsLabel': 'Values &amp; working style',
+  'ex.trait1.a': 'qualitative',
+  'ex.trait1.b': 'quantitative',
+  'ex.trait2.a': 'individual case',
+  'ex.trait2.b': 'pattern/scale',
+  'ex.trait3.a': 'security',
+  'ex.trait3.b': 'initiative',
+  'ex.evidence.strong': 'strong evidence',
+  'ex.evidence.medium': 'medium evidence',
+  'ex.evidence.weak': 'weak evidence',
+  'ex.toolsLabel': 'Tool use',
+  'tool.questionnaires': 'Questionnaires',
+  'tool.design': 'Design',
+  'tool.organization': 'Organization',
+  'tool.analysis': 'Analysis',
+  'tool.recruiting': 'Recruiting',
+  'tool.ai': 'AI assistants',
+  'ex.legend': 'Grayed out = no cue in this post - not automatically &ldquo;not used&rdquo;.',
+  'p.method2': 'To find recurring patterns and construct the types, I used k-means clustering on standardized scores. Because unstructured natural language is what it is, one rule mattered throughout: dimensions without evidence are excluded per person rather than guessed. If somebody doesn’t mention a tool, that doesn’t mean they don’t use it - absence of evidence is not evidence of absence. Filling the gaps in would make the data look more complete than it is and quietly pull every person toward the average. Honest gaps beat invented values - not out of modesty, but because it’s the precondition for clusters that describe real people instead of artifacts of data preparation.',
   'h.types': 'Five types',
-  'p.typesLead': 'Five clear types emerged from the community data:',
-  'cluster.0.name': 'AI-Curious Systems Thinkers',
-  'cluster.0.desc': 'Heaviest AI-assistant users of any type, thinking in mechanisms and models rather than individual cases. Reflective, with little use of recruiting/testing tools.',
-  'cluster.1.name': 'Business-Embedded Operators',
-  'cluster.1.desc': 'Mostly senior, with a clear eye on business impact and by far the heaviest use of organizational/stakeholder tools. Acts fast, works closely within teams.',
-  'cluster.2.name': 'Creative Explorers',
-  'cluster.2.desc': 'Early-career, with strikingly creative method design and heavy use of design tools. Values robust knowledge over quick solutions, approaches work reflectively.',
-  'cluster.3.name': 'Hands-On Qual Fieldworkers',
-  'cluster.3.desc': 'Classic fieldworkers: heavy recruiting/testing tool use, qualitative over quantitative, focused on individual depth over scale. More initiative-taking than most.',
-  'cluster.4.name': 'Independent Quant Measurers',
-  'cluster.4.desc': "Quantitative and scale-oriented, with the heaviest use of questionnaire and analysis tools of any type. Independent, business-aware - the community's numbers people.",
+  'p.typesLead': 'Five types emerged from the data pool:',
+  'cluster.0.name': 'AI Enthusiasts and Systems Thinkers',
+  'cluster.0.desc': 'Heaviest AI-assistant users of any type, thinking in mechanisms and models rather than individual cases. Reflective rather than action-driven, with little use of recruiting/testing tools.',
+  'cluster.1.name': 'Business Pilots and Pragmatists',
+  'cluster.1.desc': 'Mostly senior, with a clear eye on business impact and by far the heaviest use of organizational and stakeholder tools. Acts fast rather than deliberating long, and works closely within teams.',
+  'cluster.2.name': 'Creative Explorers and Pioneers',
+  'cluster.2.desc': 'Early-career, with strikingly creative method design and heavy use of design tools. Values robust knowledge over quick solutions and approaches work reflectively.',
+  'cluster.3.name': 'User-Focused Fieldworkers (hands-on)',
+  'cluster.3.desc': 'Classic fieldworkers: heavy recruiting/testing tool use, qualitative over quantitative, focused on individual depth over scale. Takes initiative more often than most other types.',
+  'cluster.4.name': 'Numbers People and Spreadsheet Lovers',
+  'cluster.4.desc': 'Quantitative and scale-oriented, with the heaviest use of questionnaire and analysis tools of any type. Works independently and with an eye on business impact - the community’s numbers people.',
   'h.myself': 'Turning the lens on myself',
-  'p.myself1': 'I converted my own CV and working habits onto the same 18 dimensions and placed myself inside the same space. The result: <strong>75% Creative Explorer</strong>, 19% Independent Quant Measurer - a hybrid profile bridging creative exploration and quantitative measurement, not a clean fit into either box.',
-  'p.myself2': "That split isn't noise, it's the honest picture. It's backed by the CV: two years of clinical assessment work judging systems by what they do to people, an AI-based measurement method I designed myself and validated on 245 participants across six scales, an IEEE journal submission, a public benchmark dataset, and fluency across four tool domains from Figma to Python and SPSS to Claude Code.",
-  'h.bothSides': 'Built for both sides',
-  'p.bothSides': "The tool doesn't just place me - it lets anyone describe the profile they're hiring for (experience level, which tool areas the role needs) and see a live compatibility score against my own profile, dimension by dimension. It's a research artifact and a pitch, in the same interface.",
+  'p.myself1': 'I converted my own CV and working habits onto the same 18 dimensions and placed myself inside the same space. The result: <strong>75% Creative Explorer and Pioneer</strong>, 19% Numbers Person - a hybrid profile bridging creative exploration and quantitative measurement, not a clean fit into either box.',
+  'p.myself2': 'Honestly, I would have expected to land closer to an equilibrium between the creative and the quantitative side - I have certainly done more work and projects in the latter than in the former. That could well be an early-career bias; it’s hard to say definitively, since unsupervised algorithms can be opaque, especially on an unstructured data foundation like this one. Then again: I do like to work creatively, and I’m always open to exploring solutions sideways from the norm. As a psychologist, I was responsible for several technical initiatives to improve assessment quality, and at university I always set out to design my own academic projects rather than following pre-defined ones from my supervisors. So maybe the algorithm is right after all - I’m a creative explorer who uses data to find the solutions his ideas need.',
+  'h.bothSides': 'Try it for your own purpose',
+  'p.bothSides': 'The tool doesn’t just analyze my profile: anyone can describe the profile they’re hiring for - or their own (experience level, tool use, working style) - and see a live compatibility score against the five types and against my own profile, dimension by dimension. If you happen to be hiring right now: you know what to do. 😉 It’s a research artifact and a pitch, in one interface.',
   'embed.eyebrow': 'Fully interactive, live below',
   'embed.heading': 'Explore the cluster space yourself',
   'embed.sub': 'Switch between the five types, compare my profile against the community average, or describe your ideal candidate and get a live match score.',
   'embed.note': 'Built with Plotly · EN/DE toggle inside the tool',
-  'embed.open': 'Open full-screen &rarr;',
+  'embed.open': 'Open full-screen &rarr;'
 };
 </script>
 <script src="../js/main.js?v=2"></script>
